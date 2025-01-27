@@ -20,7 +20,7 @@ def draw_koch_curve(order, size=300):
     t.goto(-size / 2, 0)
     t.pendown()
 
-    for _ in range(3):
+    for _ in range(2):
         koch_curve(t, order, size)
         t.right(120)
 
@@ -32,7 +32,7 @@ def draw_koch_curve(order, size=300):
 if __name__ == "__main__":
     try:
         level = int(
-            input("Введіть рівень рекурсії для малювання сніжинки Коха (наприклад, 3): "))
+            input("Введіть рівень рекурсії для малювання сніжинки Коха, наприклад 3: "))
         if level < 0:
             raise ValueError("Рівень рекурсії повинен бути невід'ємним числом")
 
